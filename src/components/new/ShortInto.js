@@ -12,10 +12,10 @@ const ShortInto = class extends React.Component {
           className="profile-pic"
           style={{ backgroundImage: `url(${profile})` }}
         />
-        <div className="has-text-centered">
-          <h1 className="title is-size-4">Welcome to RoshMade.</h1>
+        <div className="title-h3 has-text-centered">
+          <div className="title is-size-6">Welcome to RoshMade.</div>
         </div>
-        <div className="has-text-centered">
+        <div className="description has-text-centered">
           The Tiny Canal Cottage® is a 1920's Craftsman-style house by the
           Venice Beach Canals in Southern California. After residing there for
           10 years, Sustainable Small Space Living Consultant Whitney Leigh

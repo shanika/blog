@@ -8,7 +8,7 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: #666666
 
 $link: $black
 
@@ -146,18 +146,32 @@ $menu-label-color: $white-ter
 
 .side-panel-desktop
   position: fixed
-  height: 100vh
-  top: 0
   left: 0
+  top: 0
+  height: 100vh
   background-color: #fff
-  z-index: 31
+  z-index: 32
   flex-direction: row
   align-items: center
-  display: none
+  display: flex
 
-+desktop
-  .side-panel-desktop-active
-    display: flex
+/* purgecss ignore */
+.slide-enter
+  transform: translateX(-100%)
+
+/* purgecss ignore */
+.slide-enter-active
+  transform: translateX(0)
+  transition: transform 500ms
+
+/* purgecss ignore */
+.slide-exit
+  transform: translateX(0)
+
+/* purgecss ignore */
+.slide-exit-active
+  transform: translateX(-100%)
+  transition: transform 500ms
 
 .side-panel-desktop-close
   position: absolute
@@ -165,11 +179,11 @@ $menu-label-color: $white-ter
   padding-top: 2.9rem
   top: 0
   left: 0
-  z-index: 32
+  z-index: 33
 
 .side-menu
-  padding-left: 8rem
-  padding-right: 8rem
+  padding-left: 12rem
+  padding-right: 12rem
   height: 100vh
   display: flex
   flex-direction: column
@@ -178,19 +192,27 @@ $menu-label-color: $white-ter
   align-items: center
   justify-content: center
   border-right: solid 1px #f0f0f0
+  color: #000
 
 .short-intro
-  width: 24rem
-  padding-left: 2rem
-  padding-right: 2rem
+  padding-left: 6rem
+  padding-right: 6rem
   height: 100vh
   display: flex
   flex-direction: column
-  gap: 2rem
+  gap: 3rem
   align-items: center
   justify-content: center
   border-right: solid 1px #f0f0f0
   font-family: Raleway, sans-serif
+  color: #666666
+
+  .title
+    color: #666666
+
+  .description
+    width: 16rem
+    font-size: 14px
 
 .profile-pic
   width: 12rem
@@ -206,3 +228,5 @@ $menu-label-color: $white-ter
   display: flex
   flex-direction: row
   gap: 1rem
+  color: #000
+  font-size: 1.3rem
